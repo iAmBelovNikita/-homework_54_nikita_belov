@@ -2,15 +2,15 @@
 
 {% block nav %}
   <div class="d-flex gap-2">
-    <a href="{% url 'products_view' %}" class="btn btn-outline-primary">
+    <a href="{% url 'products_view' %}" class="btn btn-primary">
       Products
     </a>
 
-    <a href="#" class="btn btn-primary">
+    <a href="{% url 'product_add_view' %}" class="btn btn-primary">
       Add Product
     </a>
 
-    <a href="{% url 'category_add_view' %}" class="btn btn-primary">
+    <a href="{% url 'category_add_view' %}" class="btn btn-outline-primary">
       Add Category
     </a>
   </div>

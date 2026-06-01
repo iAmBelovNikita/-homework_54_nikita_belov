@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block nav %}
+  <div class="d-flex gap-2">
+    <a href="{% url 'products_view' %}" class="btn btn-primary">
+      Products
+    </a>
+
+    <a href="{% url 'product_add_view' %}" class="btn btn-outline-primary">
+      Add Product
+    </a>
+
+    <a href="{% url 'category_add_view' %}" class="btn btn-primary">
+      Add Category
+    </a>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="mt-4">
+    <h2 class="mb-4">Add Product</h2>
+
+    {% if error %}
+      <div class="alert alert-danger">
+        {{ error }}
+      </div>
+    {% endif %}
+
+    <form method="post" class="w-50">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        <input type="text"
+               name="title"
+               class="form-control"
+               placeholder="Title"
+               value="{{ title }}"
+               required>
+      </div>
+
+      <div class="mb-3">
+        <input type="number"
+               name="price"
+               class="form-control"
+               placeholder="Price"
+               value="{{ price }}"
+               required>
+      </div>
+
+      <div class="mb-3">
+        <input type="url"
+               name="image_link"
+               class="form-control"
+               placeholder="Image url"
+               value="{{ image_link }}"
+               required>
+      </div>
+
+      <div class="mb-3">
+        <select name="category" class="form-select" required>
+          <option value="">Category</option>
+
+          {% for category in categories %}
+            <option value="{{ category.pk }}">
+              {{ category.title }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <textarea name="description"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Description">{{ description }}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Add product
+      </button>
+    </form>
+  </div>
+{% endblock %}
