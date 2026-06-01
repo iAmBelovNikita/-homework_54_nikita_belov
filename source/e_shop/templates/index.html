@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block nav %}
+  <div class="d-flex gap-2">
+    <a href="{% url 'products_view' %}" class="btn btn-outline-primary">
+      Products
+    </a>
+
+    <a href="{% url 'products_view' %}" class="btn btn-primary">
+      Add Product
+    </a>
+
+    <a href="{% url 'products_view' %}" class="btn btn-primary">
+      Add Category
+    </a>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    {% for product in products %}
+      <div class="col-md-6 mb-4">
+  <div class="card">
+    <div class="d-flex">
+
+      <img src="{{ product.image_link }}"
+           class="rounded-start object-fit-cover"
+           alt="{{ product.title }}"
+           style="width: 180px; height: 180px;">
+
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ product.title }}
+        </h5>
+
+        <p class="card-text mb-1">
+          <small class="text-body-secondary">
+            {{ product.category }}
+          </small>
+        </p>
+
+        <p class="card-text fw-bold mb-2">
+          Price: {{ product.price }}$
+        </p>
+
+        <a href="{% url 'products_view' %}">
+          see more >>>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+    {% empty %}
+      <p>No products</p>
+    {% endfor %}
+  </div>
+{% endblock %}
