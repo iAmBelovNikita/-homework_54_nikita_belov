@@ -35,7 +35,7 @@
 
         <p class="card-text mb-1">
           <small class="text-body-secondary">
-            {{ product.category }}
+            {{ product.category.title }}
           </small>
         </p>
 
@@ -43,7 +43,7 @@
           Price: {{ product.price }}$
         </p>
 
-        <a href="{% url 'products_view' %}">
+        <a href="{% url 'product_view' product.pk %}">
           see more >>>
         </a>
       </div>
