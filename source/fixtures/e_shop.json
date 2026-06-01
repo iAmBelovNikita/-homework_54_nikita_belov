@@ -1,0 +1,86 @@
+[
+{
+    "model": "e_shop.category",
+    "pk": 5,
+    "fields": {
+        "title": "bread",
+        "description": "Softy"
+    }
+},
+{
+    "model": "e_shop.category",
+    "pk": 6,
+    "fields": {
+        "title": "meat",
+        "description": ""
+    }
+},
+{
+    "model": "e_shop.category",
+    "pk": 7,
+    "fields": {
+        "title": "oil",
+        "description": ""
+    }
+},
+{
+    "model": "e_shop.product",
+    "pk": 5,
+    "fields": {
+        "title": "baguette",
+        "description": "So French, so baguette",
+        "category": 5,
+        "created_at": "2026-06-01T12:07:59.388Z",
+        "price": "5.00",
+        "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Morning_baguettes.jpg/250px-Morning_baguettes.jpg"
+    }
+},
+{
+    "model": "e_shop.product",
+    "pk": 6,
+    "fields": {
+        "title": "Fluffy bread",
+        "description": "",
+        "category": 5,
+        "created_at": "2026-06-01T12:09:09.378Z",
+        "price": "7.00",
+        "image_link": "https://tiffycooks.com/wp-content/uploads/2021/04/Screen-Shot-2021-04-20-at-1.04.46-AM.png"
+    }
+},
+{
+    "model": "e_shop.product",
+    "pk": 7,
+    "fields": {
+        "title": "Fresh meat",
+        "description": "We don't know who is it was",
+        "category": 6,
+        "created_at": "2026-06-01T12:10:40.846Z",
+        "price": "17.00",
+        "image_link": "https://www.winnersmeats.com/cdn/shop/collections/filet_375x291_crop_center.jpg?v=1743791456"
+    }
+},
+{
+    "model": "e_shop.product",
+    "pk": 8,
+    "fields": {
+        "title": "Olive oil",
+        "description": "Olive oil, maybe virgin maybe not",
+        "category": 7,
+        "created_at": "2026-06-01T12:11:41.829Z",
+        "price": "12.00",
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dBWyUGm4BQ1k8B7UC7JBTSfBkRu-zFPb3g&s"
+    }
+},
+{
+    "model": "e_shop.product",
+    "pk": 9,
+    "fields": {
+        "title": "Engine Oil",
+        "description": "What ? It's also oil",
+        "category": 7,
+        "created_at": "2026-06-01T12:12:49.315Z",
+        "price": "25.00",
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvFPm9SYua4Bw3O31eOHwzg0eGIDna_soJxw&s"
+    }
+}
+]
