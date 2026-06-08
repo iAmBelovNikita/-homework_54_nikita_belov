@@ -17,67 +17,18 @@
 {% endblock %}
 
 {% block content %}
-  <div class="mt-4">
-    <h2 class="mb-4">Add Product</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
 
-    {% if error %}
-      <div class="alert alert-danger">
-        {{ error }}
-      </div>
-    {% endif %}
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h1 class="card-title mb-4">Add product</h1>
 
-    <form method="post" class="w-50">
-      {% csrf_token %}
+          {% include "partial/product_form.html" with button_text="Create" %}
 
-      <div class="mb-3">
-        <input type="text"
-               name="title"
-               class="form-control"
-               placeholder="Title"
-               value="{{ title }}"
-               required>
+        </div>
       </div>
 
-      <div class="mb-3">
-        <input type="number"
-               name="price"
-               class="form-control"
-               placeholder="Price"
-               value="{{ price }}"
-               required>
-      </div>
-
-      <div class="mb-3">
-        <input type="url"
-               name="image_link"
-               class="form-control"
-               placeholder="Image url"
-               value="{{ image_link }}"
-               required>
-      </div>
-
-      <div class="mb-3">
-        <select name="category" class="form-select" required>
-          <option value="">Category</option>
-
-          {% for category in categories %}
-            <option value="{{ category.pk }}">
-              {{ category.title }}
-            </option>
-          {% endfor %}
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <textarea name="description"
-                  class="form-control"
-                  rows="5"
-                  placeholder="Description">{{ description }}</textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">
-        Add product
-      </button>
-    </form>
+    </div>
   </div>
 {% endblock %}

@@ -1,8 +1,7 @@
 from django.db.models.functions import Lower
 from django.shortcuts import render, get_object_or_404, redirect
 
-from decimal import Decimal, InvalidOperation
-
+from .forms import ProductForm
 from .models import Product, Category
 
 
@@ -16,67 +15,32 @@ def product_view(request, pk):
     product = get_object_or_404(Product, pk=pk)
     return render(request, "product.html", {"product": product})
 
+
 def product_add_view(request):
-    categories = Category.objects.all()
+    form = ProductForm()
 
-    if request.method == "GET":
-        return render(request, "product_add.html", {
-            "categories": categories
-        })
+    if request.method == 'GET':
+        context = {'form': form}
+        return render(request, 'product_add.html', context)
 
-    elif request.method == "POST":
-        title = request.POST.get("title", "").strip()
-        price = request.POST.get("price", "").strip()
-        image_link = request.POST.get("image_link", "").strip()
-        category_id = request.POST.get("category")
-        description = request.POST.get("description", "").strip()
+    elif request.method == 'POST':
+        form = ProductForm(request.POST)
 
-        if not title or not price or not image_link or not category_id:
-            return render(request, "product_add.html", {
-                "categories": categories,
-                "error": "Title, price, image url and category are required",
-                "title": title,
-                "price": price,
-                "image_link": image_link,
-                "description": description,
-                "selected_category_id": category_id,
-            })
+        if form.is_valid():
+            product = Product(
+                title=form.cleaned_data.get('title'),
+                description=form.cleaned_data.get('description'),
+                category=form.cleaned_data.get('category'),
+                price=form.cleaned_data.get('price'),
+                remains=form.cleaned_data.get('remains'),
+                image_link=form.cleaned_data.get('image_link'),
+            )
+            product.save()
 
-        try:
-            price = Decimal(price)
-        except InvalidOperation:
-            return render(request, "product_add.html", {
-                "categories": categories,
-                "error": "Price must be a number",
-                "title": title,
-                "price": request.POST.get("price", ""),
-                "image_link": image_link,
-                "description": description,
-                "selected_category_id": category_id,
-            })
+            return redirect('product_view', pk=product.pk)
 
-        if price < 0:
-            return render(request, "product_add.html", {
-                "categories": categories,
-                "error": "Price cannot be negative",
-                "title": title,
-                "price": price,
-                "image_link": image_link,
-                "description": description,
-                "selected_category_id": category_id,
-            })
-
-        category = get_object_or_404(Category, pk=category_id)
-
-        product = Product.objects.create(
-            title=title,
-            price=price,
-            image_link=image_link,
-            category=category,
-            description=description,
-        )
-
-        return redirect("product_view", pk=product.pk)
+        context = {'form': form}
+        return render(request, 'product_add.html', context)
 
 def category_add_view(request):
     if request.method == "GET":
