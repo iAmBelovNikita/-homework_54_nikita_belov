@@ -1,3 +1,4 @@
+from django.db.models.functions import Lower
 from django.shortcuts import render, get_object_or_404, redirect
 
 from decimal import Decimal, InvalidOperation
@@ -8,7 +9,7 @@ from .models import Product, Category
 # Create your views here.
 
 def products_view(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(remains__gt=0).order_by(Lower("category__title"), Lower("title"))
     return render(request, "index.html", {"products": products})
 
 def product_view(request, pk):
