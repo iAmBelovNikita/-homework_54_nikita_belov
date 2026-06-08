@@ -42,6 +42,40 @@ def product_add_view(request):
         context = {'form': form}
         return render(request, 'product_add.html', context)
 
+
+def product_update_view(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+
+    form = ProductForm(initial={
+        'title': product.title,
+        'description': product.description,
+        'category': product.category,
+        'price': product.price,
+        'remains': product.remains,
+        'image_link': product.image_link,
+    })
+
+    if request.method == 'GET':
+        context = {'form': form, 'product': product}
+        return render(request, 'product_update.html', context)
+
+    elif request.method == 'POST':
+        form = ProductForm(request.POST)
+
+        if form.is_valid():
+            product.title = form.cleaned_data.get('title')
+            product.description = form.cleaned_data.get('description')
+            product.category = form.cleaned_data.get('category')
+            product.price = form.cleaned_data.get('price')
+            product.remains = form.cleaned_data.get('remains')
+            product.image_link = form.cleaned_data.get('image_link')
+            product.save()
+
+            return redirect('product_view', pk=product.pk)
+
+        context = {'form': form, 'product': product}
+        return render(request, 'product_update.html', context)
+
 def category_add_view(request):
     if request.method == "GET":
         return render(request, "category_add.html")
