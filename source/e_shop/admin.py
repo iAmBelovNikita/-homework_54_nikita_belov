@@ -12,9 +12,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'category', 'price', 'created_at', 'image_link')
-    list_filter = ('category', 'created_at', 'price')
-    fields = ('title', 'description', 'category', 'price', 'image_link', 'created_at')
+    list_display = ('id', 'title', 'category', 'price', 'remains', 'created_at', 'image_link')
+    list_filter = ('category', 'created_at', 'price', 'remains')
+    fields = ('title', 'description', 'category', 'price', 'remains', 'image_link', 'created_at')
     search_fields = ('title', 'description', 'category__title', 'price')
     readonly_fields = ('created_at',)
 
