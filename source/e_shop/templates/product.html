@@ -48,18 +48,17 @@
         added: {{ product.created_at|date:"d/m/Y H:i" }}
       </p>
       <div class="d-flex justify-content-between align-items-center mb-4">
-
         <div class="d-flex gap-2 fs-4 flex-shrink-0">
-        <a href="{% url 'product_update_view' product.pk %}" class="text-dark text-decoration-none">
-          <i class="bi bi-pencil-square"> Edit</i>
-        </a>
-        |
-        <a href="#" class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#product-{{ message.pk }}-Modal">
-          <i class="bi bi-x-square"> Delete</i>
-        </a>
+          <a href="{% url 'product_update_view' product.pk %}" class="text-dark text-decoration-none">
+            <i class="bi bi-pencil-square"> Edit</i>
+          </a>
+          |
+          <a href="#" class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#product-{{ product.pk }}-Modal">
+            <i class="bi bi-x-square"> Delete</i>
+          </a>
+        </div>
       </div>
-
-    </div>
+    {% include 'partial/product_delete_modal.html' with product=product %}
     </div>
   </div>
 {% endblock %}

@@ -1,19 +1,19 @@
-    <div class="modal fade" id="product-{{ message.pk }}-Modal" tabindex="-1" aria-labelledby="messageModalLabel-{{ message.pk }}" aria-hidden="true">
+    <div class="modal fade" id="product-{{ product.pk }}-Modal" tabindex="-1" aria-labelledby="productModalLabel-{{ product.pk }}" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="messageModalLabel-{{ message.pk }}">Delete Product {{ message.author }} ?</h1>
+                    <h1 class="modal-title fs-5" id="productModalLabel-{{ product.pk }}">Delete Product {{ product.author }} ?</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure want to delete message - "{{ message.author }}" ?</p>
-                    <form action="{% url 'delete_view' message.pk %}" id="message-delete-form-{{ message.pk }}" method="POST">
+                    <p>Are you sure want to delete product - "{{ product.title }}" ?</p>
+                    <form action="{% url 'product_delete_view' product.pk %}" id="product-delete-form-{{ product.pk }}" method="POST">
                         {% csrf_token %}
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
-                    <button type="submit" form="message-delete-form-{{ message.pk }}" class="btn btn-danger">Delete</button>
+                    <button type="submit" form="product-delete-form-{{ product.pk }}" class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>

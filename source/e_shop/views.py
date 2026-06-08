@@ -15,7 +15,6 @@ def product_view(request, pk):
     product = get_object_or_404(Product, pk=pk)
     return render(request, "product.html", {"product": product})
 
-
 def product_add_view(request):
     form = ProductForm()
 
@@ -41,7 +40,6 @@ def product_add_view(request):
 
         context = {'form': form}
         return render(request, 'product_add.html', context)
-
 
 def product_update_view(request, pk):
     product = get_object_or_404(Product, pk=pk)
@@ -75,6 +73,14 @@ def product_update_view(request, pk):
 
         context = {'form': form, 'product': product}
         return render(request, 'product_update.html', context)
+
+def product_delete_view(request, pk):
+    if request.method == 'POST':
+        product = get_object_or_404(Product, pk=pk)
+        product.delete()
+
+    return redirect('products_view')
+
 
 def category_add_view(request):
     if request.method == "GET":
