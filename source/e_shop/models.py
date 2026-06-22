@@ -28,3 +28,16 @@ class Product(models.Model):
     class Meta:
         db_table = "Product"
         verbose_name = "Product"
+
+class CartItem(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="cart_items")
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.product.title} x{self.quantity}"
+
+    def total_price(self):
+        return self.product.price * self.quantity
+
+    class Meta:
+        db_table = "CartItem"
