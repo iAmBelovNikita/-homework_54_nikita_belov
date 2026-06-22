@@ -1,258 +1,364 @@
 [
-  {
+{
     "model": "e_shop.category",
     "pk": 5,
     "fields": {
-      "title": "bread",
-      "description": "Softy"
+        "title": "bread",
+        "description": "Softy"
     }
-  },
-  {
+},
+{
     "model": "e_shop.category",
     "pk": 6,
     "fields": {
-      "title": "meat",
-      "description": ""
+        "title": "meat",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "e_shop.category",
     "pk": 7,
     "fields": {
-      "title": "oil",
-      "description": ""
+        "title": "oil",
+        "description": ""
     }
-  },
-  {
+},
+{
     "model": "e_shop.category",
     "pk": 8,
     "fields": {
-      "title": "dairy",
-      "description": "Milk, cheese, butter and more"
+        "title": "dairy",
+        "description": "Milk, cheese, butter and more"
     }
-  },
-  {
+},
+{
     "model": "e_shop.category",
     "pk": 9,
     "fields": {
-      "title": "vegetables",
-      "description": "Fresh from the garden"
+        "title": "vegetables",
+        "description": "Fresh from the garden"
     }
-  },
-  {
+},
+{
     "model": "e_shop.category",
     "pk": 10,
     "fields": {
-      "title": "drinks",
-      "description": "Beverages of all kinds"
+        "title": "drinks",
+        "description": "Beverages of all kinds"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 5,
     "fields": {
-      "title": "baguette",
-      "description": "So French, so baguette",
-      "category": 5,
-      "created_at": "2026-06-01T12:07:59.388Z",
-      "price": "5.00",
-      "remains": 5,
-      "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Morning_baguettes.jpg/250px-Morning_baguettes.jpg"
+        "title": "baguette",
+        "description": "So French, so baguette",
+        "category": 5,
+        "created_at": "2026-06-01T12:07:59.388Z",
+        "price": "5.00",
+        "remains": 0,
+        "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Morning_baguettes.jpg/250px-Morning_baguettes.jpg"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 6,
     "fields": {
-      "title": "Fluffy bread",
-      "description": "",
-      "category": 5,
-      "created_at": "2026-06-01T12:09:09.378Z",
-      "price": "7.00",
-      "remains": 9,
-      "image_link": "https://tiffycooks.com/wp-content/uploads/2021/04/Screen-Shot-2021-04-20-at-1.04.46-AM.png"
+        "title": "Fluffy bread",
+        "description": "",
+        "category": 5,
+        "created_at": "2026-06-01T12:09:09.378Z",
+        "price": "7.00",
+        "remains": 5,
+        "image_link": "https://tiffycooks.com/wp-content/uploads/2021/04/Screen-Shot-2021-04-20-at-1.04.46-AM.png"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 7,
     "fields": {
-      "title": "Fresh meat",
-      "description": "We don't know who it was",
-      "category": 6,
-      "created_at": "2026-06-01T12:10:40.846Z",
-      "price": "17.00",
-      "remains": 7,
-      "image_link": "https://www.winnersmeats.com/cdn/shop/collections/filet_375x291_crop_center.jpg?v=1743791456"
+        "title": "Fresh meat",
+        "description": "We don't know who it was",
+        "category": 6,
+        "created_at": "2026-06-01T12:10:40.846Z",
+        "price": "17.00",
+        "remains": 7,
+        "image_link": "https://www.winnersmeats.com/cdn/shop/collections/filet_375x291_crop_center.jpg?v=1743791456"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 8,
     "fields": {
-      "title": "Olive oil",
-      "description": "Olive oil, maybe virgin maybe not",
-      "category": 7,
-      "created_at": "2026-06-01T12:11:41.829Z",
-      "price": "12.00",
-      "remains": 12,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dBWyUGm4BQ1k8B7UC7JBTSfBkRu-zFPb3g&s"
+        "title": "Olive oil",
+        "description": "Olive oil, maybe virgin maybe not",
+        "category": 7,
+        "created_at": "2026-06-01T12:11:41.829Z",
+        "price": "12.00",
+        "remains": 12,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dBWyUGm4BQ1k8B7UC7JBTSfBkRu-zFPb3g&s"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 9,
     "fields": {
-      "title": "Engine Oil",
-      "description": "What? It's also oil",
-      "category": 7,
-      "created_at": "2026-06-01T12:12:49.315Z",
-      "price": "25.00",
-      "remains": 0,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvFPm9SYua4Bw3O31eOHwzg0eGIDna_soJxw&s"
+        "title": "Engine Oil",
+        "description": "What? It's also oil",
+        "category": 7,
+        "created_at": "2026-06-01T12:12:49.315Z",
+        "price": "25.00",
+        "remains": 0,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvFPm9SYua4Bw3O31eOHwzg0eGIDna_soJxw&s"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 10,
     "fields": {
-      "title": "Meat 2",
-      "description": "Some sort of meat",
-      "category": 6,
-      "created_at": "2026-06-08T10:09:13.126Z",
-      "price": "512.75",
-      "remains": 0,
-      "image_link": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2020/03/steak.jpg"
+        "title": "Meat 2",
+        "description": "Some sort of meat",
+        "category": 6,
+        "created_at": "2026-06-08T10:09:13.126Z",
+        "price": "512.75",
+        "remains": 0,
+        "image_link": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2020/03/steak.jpg"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 11,
     "fields": {
-      "title": "Sourdough bread",
-      "description": "Tangy and chewy, baked fresh daily",
-      "category": 5,
-      "created_at": "2026-06-10T08:00:00.000Z",
-      "price": "9.50",
-      "remains": 14,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8zHa6iBT_aqhc8o5zyTaWCWQNIwGqZwM9KgBPtPYNVkqR7RK0P2NmfZfRVpDaBRmt_3YC-Zo7lxN4hu_4jaUlwmdAkQ-sGiQenAl0JY&s=10"
+        "title": "Sourdough bread",
+        "description": "Tangy and chewy, baked fresh daily",
+        "category": 5,
+        "created_at": "2026-06-10T08:00:00Z",
+        "price": "9.50",
+        "remains": 13,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC8zHa6iBT_aqhc8o5zyTaWCWQNIwGqZwM9KgBPtPYNVkqR7RK0P2NmfZfRVpDaBRmt_3YC-Zo7lxN4hu_4jaUlwmdAkQ-sGiQenAl0JY&s=10"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 12,
     "fields": {
-      "title": "Chicken breast",
-      "description": "Lean and tender, perfect for grilling",
-      "category": 6,
-      "created_at": "2026-06-10T08:05:00.000Z",
-      "price": "8.99",
-      "remains": 20,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIpqlQU9gmqN8lgDIqxOSnSbR3F8wBF3WCS72vOAzEG9RPJSYhO9juUb_p&s=10"
+        "title": "Chicken breast",
+        "description": "Lean and tender, perfect for grilling",
+        "category": 6,
+        "created_at": "2026-06-10T08:05:00Z",
+        "price": "8.99",
+        "remains": 20,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIpqlQU9gmqN8lgDIqxOSnSbR3F8wBF3WCS72vOAzEG9RPJSYhO9juUb_p&s=10"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 13,
     "fields": {
-      "title": "Sunflower oil",
-      "description": "Light and versatile cooking oil",
-      "category": 7,
-      "created_at": "2026-06-10T08:10:00.000Z",
-      "price": "6.49",
-      "remains": 30,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pcyM2l0Porf2q375TuG4RS8GRrfBdnvvwMrlJTU22imxJ4wFA4BeNRlP&s=10"
+        "title": "Sunflower oil",
+        "description": "Light and versatile cooking oil",
+        "category": 7,
+        "created_at": "2026-06-10T08:10:00Z",
+        "price": "6.49",
+        "remains": 30,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9pcyM2l0Porf2q375TuG4RS8GRrfBdnvvwMrlJTU22imxJ4wFA4BeNRlP&s=10"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 14,
     "fields": {
-      "title": "Whole milk",
-      "description": "Fresh whole milk, 1 litre",
-      "category": 8,
-      "created_at": "2026-06-10T08:15:00.000Z",
-      "price": "2.99",
-      "remains": 50,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfvKXyG5kMfad7XzceccmYYGM8alljpFOzLDY8EgmdKqLDQfM8JXmxmi4L&s=10"
+        "title": "Whole milk",
+        "description": "Fresh whole milk, 1 litre",
+        "category": 8,
+        "created_at": "2026-06-10T08:15:00Z",
+        "price": "2.99",
+        "remains": 49,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfvKXyG5kMfad7XzceccmYYGM8alljpFOzLDY8EgmdKqLDQfM8JXmxmi4L&s=10"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 15,
     "fields": {
-      "title": "Cheddar cheese",
-      "description": "Aged cheddar with a sharp bite",
-      "category": 8,
-      "created_at": "2026-06-10T08:20:00.000Z",
-      "price": "11.00",
-      "remains": 18,
-      "image_link": "https://images.squarespace-cdn.com/content/v1/5eb43938f468c330e7d8d665/afb5a028-1b0c-4026-a6e7-ea2e783efa32/Sharp+Cheddar_.jpg"
+        "title": "Cheddar cheese",
+        "description": "Aged cheddar with a sharp bite",
+        "category": 8,
+        "created_at": "2026-06-10T08:20:00Z",
+        "price": "11.00",
+        "remains": 16,
+        "image_link": "https://images.squarespace-cdn.com/content/v1/5eb43938f468c330e7d8d665/afb5a028-1b0c-4026-a6e7-ea2e783efa32/Sharp+Cheddar_.jpg"
     }
-  },
-  {
-    "model": "e_shop.product",
-    "pk": 16,
-    "fields": {
-      "title": "Butter",
-      "description": "Creamy unsalted butter, 200g",
-      "category": 8,
-      "created_at": "2026-06-10T08:25:00.000Z",
-      "price": "4.50",
-      "remains": 25,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0s-MVKsDno6b_-zokOHkht29455DBH2cdsbP2-nvG87seo0jBVXnwEWQb&s=10"
-    }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 17,
     "fields": {
-      "title": "Tomatoes",
-      "description": "Ripe vine tomatoes, sold by kg",
-      "category": 9,
-      "created_at": "2026-06-10T08:30:00.000Z",
-      "price": "3.20",
-      "remains": 60,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLwWMl3A7zpSH0UY2Z8TNGiSJUq6r4Fp01T8tBMmaOmWCUadzx2ZiSCU&s=10"
+        "title": "Tomatoes",
+        "description": "Ripe vine tomatoes, sold by kg",
+        "category": 9,
+        "created_at": "2026-06-10T08:30:00Z",
+        "price": "3.20",
+        "remains": 59,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLwWMl3A7zpSH0UY2Z8TNGiSJUq6r4Fp01T8tBMmaOmWCUadzx2ZiSCU&s=10"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 18,
     "fields": {
-      "title": "Carrots",
-      "description": "Crunchy orange carrots, 1kg bag",
-      "category": 9,
-      "created_at": "2026-06-10T08:35:00.000Z",
-      "price": "1.80",
-      "remains": 40,
-      "image_link": "https://static01.nyt.com/images/2014/05/22/dining/Carrots-With-Orange-And-Cardamom/Carrots-With-Orange-And-Cardamom-jumbo.jpg"
+        "title": "Carrots",
+        "description": "Crunchy orange carrots, 1kg bag",
+        "category": 9,
+        "created_at": "2026-06-10T08:35:00Z",
+        "price": "5.00",
+        "remains": 39,
+        "image_link": "https://static01.nyt.com/images/2014/05/22/dining/Carrots-With-Orange-And-Cardamom/Carrots-With-Orange-And-Cardamom-jumbo.jpg"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 19,
     "fields": {
-      "title": "Orange juice",
-      "description": "Freshly squeezed, no added sugar",
-      "category": 10,
-      "created_at": "2026-06-10T08:40:00.000Z",
-      "price": "5.75",
-      "remains": 22,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR33lJ-mPgNw6tQS26UDgCJF7EOJ5-PvgZj0SRfDGfUp-LsTsYrfzZsGVA&s=10"
+        "title": "Orange juice",
+        "description": "Freshly squeezed, no added sugar",
+        "category": 10,
+        "created_at": "2026-06-10T08:40:00Z",
+        "price": "5.75",
+        "remains": 22,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR33lJ-mPgNw6tQS26UDgCJF7EOJ5-PvgZj0SRfDGfUp-LsTsYrfzZsGVA&s=10"
     }
-  },
-  {
+},
+{
     "model": "e_shop.product",
     "pk": 20,
     "fields": {
-      "title": "Sparkling water",
-      "description": "Naturally carbonated mineral water, 1.5L",
-      "category": 10,
-      "created_at": "2026-06-10T08:45:00.000Z",
-      "price": "1.50",
-      "remains": 100,
-      "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAclxIf5Og2VvxJm6Mb0-j35g1UiVLRbG3vnM8pG2g0asdWTtRNyF7hZI&s=10"
+        "title": "Sparkling water",
+        "description": "Naturally carbonated mineral water, 1.5L",
+        "category": 10,
+        "created_at": "2026-06-10T08:45:00Z",
+        "price": "1.53",
+        "remains": 100,
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAclxIf5Og2VvxJm6Mb0-j35g1UiVLRbG3vnM8pG2g0asdWTtRNyF7hZI&s=10"
     }
-  }
+},
+{
+    "model": "e_shop.order",
+    "pk": 4,
+    "fields": {
+        "name": "Alla Skripnikova",
+        "phone": "+7 999 777 777",
+        "address": "Bishkek, Somewhere",
+        "created_at": "2026-06-22T12:00:15.719Z"
+    }
+},
+{
+    "model": "e_shop.order",
+    "pk": 5,
+    "fields": {
+        "name": "Test",
+        "phone": "+996 456 52 48 00",
+        "address": "TEST",
+        "created_at": "2026-06-22T12:03:41.526Z"
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 12,
+    "fields": {
+        "order": 4,
+        "product": 6,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 13,
+    "fields": {
+        "order": 4,
+        "product": 5,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 14,
+    "fields": {
+        "order": 4,
+        "product": 11,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 15,
+    "fields": {
+        "order": 4,
+        "product": 14,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 16,
+    "fields": {
+        "order": 4,
+        "product": 15,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 17,
+    "fields": {
+        "order": 4,
+        "product": 17,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 18,
+    "fields": {
+        "order": 4,
+        "product": 18,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 19,
+    "fields": {
+        "order": 5,
+        "product": 5,
+        "quantity": 1
+    }
+},
+{
+    "model": "e_shop.orderitem",
+    "pk": 20,
+    "fields": {
+        "order": 5,
+        "product": 6,
+        "quantity": 1
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$ZmOuz1XbWJGm2vzcyGx4vA$BEfXul8eqhSje1d2vwIboh1CEWsI5jFmsn6T1RsXe/Q=",
+        "last_login": "2026-06-22T11:40:01.739Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-08T10:07:04.153Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
 ]

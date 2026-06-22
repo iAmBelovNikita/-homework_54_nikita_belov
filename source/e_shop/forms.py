@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import TextInput, Textarea, NumberInput
+from django.forms import TextInput, Textarea, NumberInput, TelInput
 from django.forms.widgets import Select
 
 from .models import Category, Product, Order
@@ -32,6 +32,6 @@ class OrderForm(forms.ModelForm):
         fields = ["name", "phone", "address"]
         widgets = {
             "name": TextInput(attrs={"class": "form-control", "placeholder": "Your name"}),
-            "phone": TextInput(attrs={"class": "form-control", "placeholder": "+7 ..."}),
+            "phone": TelInput(attrs={"class": "form-control", "placeholder": "+996 ..."}),
             "address": TextInput(attrs={"class": "form-control", "placeholder": "Delivery address"}),
         }
