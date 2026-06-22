@@ -39,3 +39,16 @@ class CartDeleteView(View):
         cart_item = get_object_or_404(CartItem, pk=pk)
         cart_item.delete()
         return redirect("cart_view")
+
+
+class CartReduceView(View):
+    def post(self, request, *args, **kwargs):
+        cart_item = get_object_or_404(CartItem, pk=kwargs["pk"])
+
+        if cart_item.quantity > 1:
+            cart_item.quantity -= 1
+            cart_item.save()
+        else:
+            cart_item.delete()
+
+        return redirect("cart_view")

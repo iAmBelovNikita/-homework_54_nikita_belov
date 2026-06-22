@@ -10,6 +10,7 @@ from .views import (
     CartView,
     CartAddView,
     CartDeleteView,
+    CartReduceView
 )
 
 urlpatterns = [
@@ -23,4 +24,5 @@ urlpatterns = [
     path("cart/", CartView.as_view(), name="cart_view"),
     path("cart/add/<int:pk>/", CartAddView.as_view(), name="cart_add"),
     path("cart/delete/<int:pk>/", CartDeleteView.as_view(), name="cart_delete"),
+    path("cart/reduce/<int:pk>/", CartReduceView.as_view(), name="cart_reduce"),
 ]

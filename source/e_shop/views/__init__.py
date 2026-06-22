@@ -13,5 +13,6 @@ from .category import (
 from .cart import (
     CartView,
     CartAddView,
-    CartDeleteView
+    CartDeleteView,
+    CartReduceView
 )
