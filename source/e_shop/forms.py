@@ -2,7 +2,7 @@ from django import forms
 from django.forms import TextInput, Textarea, NumberInput
 from django.forms.widgets import Select
 
-from .models import Category, Product
+from .models import Category, Product, Order
 
 class ProductForm(forms.ModelForm):
     class Meta:
@@ -24,4 +24,14 @@ class CategoryForm(forms.ModelForm):
         widgets = {
             "title": TextInput(attrs={"class": "form-control"}),
             "description": Textarea(attrs={"class": "form-control", "rows": "5"}),
+        }
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ["name", "phone", "address"]
+        widgets = {
+            "name": TextInput(attrs={"class": "form-control", "placeholder": "Your name"}),
+            "phone": TextInput(attrs={"class": "form-control", "placeholder": "+7 ..."}),
+            "address": TextInput(attrs={"class": "form-control", "placeholder": "Delivery address"}),
         }

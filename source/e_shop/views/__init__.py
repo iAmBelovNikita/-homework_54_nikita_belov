@@ -14,5 +14,6 @@ from .cart import (
     CartView,
     CartAddView,
     CartDeleteView,
-    CartReduceView
+    CartReduceView,
+    OrderCreateView
 )

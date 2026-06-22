@@ -26,28 +26,7 @@
       </div>
     {% endif %}
 
-    <form method="post" class="w-50">
-      {% csrf_token %}
+    {% include "partial/form.html" with button_text="Create" %}
 
-      <div class="mb-3">
-        <input type="text"
-               name="title"
-               class="form-control"
-               placeholder="Title"
-               value="{{ title }}"
-               required>
-      </div>
-
-      <div class="mb-3">
-        <textarea name="description"
-                  class="form-control"
-                  rows="5"
-                  placeholder="Description">{{ description }}</textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">
-        Create
-      </button>
-    </form>
   </div>
 {% endblock %}

@@ -59,6 +59,13 @@
         </tr>
       </tfoot>
     </table>
+
+    <hr class="my-4">
+
+    <h4 class="mb-3">Checkout</h4>
+
+    {% include 'partial/form.html' with form=order_form button_text="Place order" form_action=order_url %}
+
   {% else %}
     <p class="text-muted">Cart is empty.</p>
   {% endif %}

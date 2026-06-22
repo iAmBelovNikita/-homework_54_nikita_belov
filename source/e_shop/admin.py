@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Category, Product
+from .models import Category, Product, OrderItem, Order
+
 
 # Register your models here.
 
@@ -19,5 +20,19 @@ class ProductAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at',)
 
 
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+    extra = 0
+    readonly_fields = ('product', 'quantity')
+
+
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'phone', 'created_at')
+    ordering = ('-created_at',)
+    readonly_fields = ('created_at',)
+    inlines = [OrderItemInline]
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Order, OrderAdmin)
