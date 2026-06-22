@@ -41,3 +41,28 @@ class CartItem(models.Model):
 
     class Meta:
         db_table = "CartItem"
+
+class Order(models.Model):
+    name = models.CharField(max_length=200)
+    phone = models.CharField(max_length=50)
+    address = models.CharField(max_length=500)
+    created_at = models.DateTimeField(auto_now_add=True)
+    products = models.ManyToManyField(Product, through="OrderItem", related_name="orders")
+
+    def __str__(self):
+        return f"Order #{self.pk} — {self.name}"
+
+    class Meta:
+        db_table = "Order"
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="order_items")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="order_items")
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.product.title} x{self.quantity}"
+
+    class Meta:
+        db_table = "OrderItem"
